@@ -46,24 +46,24 @@ Reproducible Environments (three venvs)
 The project was implemented using **three** isolated Python virtual environments:
 
 A) base_venv  (for `etl`, `eda`, `traditional_models`, `results`, `portfolio_building`, `portfolio_results`, `graphs`)
-	- Python 3.12.3
-		- pandas==2.2.2, numpy==1.26.4, scikit-learn==1.4.2, xgboost==2.1.2, scipy==1.13.1
-   		- matplotlib==3.8.4, seaborn==0.13.2
-   		- torch==2.6.0 (install the CUDA build that matches your GPU; CPU-only also works for these notebooks)
+- Python 3.12.3
+	- pandas==2.2.2, numpy==1.26.4, scikit-learn==1.4.2, xgboost==2.1.2, scipy==1.13.1
+	- matplotlib==3.8.4, seaborn==0.13.2
+	- torch==2.6.0 (install the CUDA build that matches your GPU; CPU-only also works for these notebooks)
 
 B) timesfm_chronos_venv  (for `timesfm_model`, `chronos_model`)
-   	- Python 3.10.18
-   		- numpy==1.26.4, pandas==2.1.4, scikit-learn==1.6.1
-		- torch==2.5.1
-   		- timesfm  (library providing TimesFm/TimesFmHparams/TimesFmCheckpoint)
-   		- chronos  (library providing BaseChronosPipeline)
-   		- huggingface_hub  (used under the hood to fetch checkpoints by repo id)
+- Python 3.10.18
+	- numpy==1.26.4, pandas==2.1.4, scikit-learn==1.6.1
+	- torch==2.5.1
+	- timesfm  (library providing TimesFm/TimesFmHparams/TimesFmCheckpoint)
+	- chronos  (library providing BaseChronosPipeline)
+	- huggingface_hub  (used under the hood to fetch checkpoints by repo id)
 
 C) uni2ts_venv  (for `uni2ts_model`)
-   	- Python 3.10.18
-   		- numpy==1.26.0, pandas==2.1.4, scikit-learn==1.7.0
-		- torch==2.5.0, gluonts==0.14.4
-		- uni2ts==1.2.0
+- Python 3.10.18
+	- numpy==1.26.0, pandas==2.1.4, scikit-learn==1.7.0
+	- torch==2.5.0, gluonts==0.14.4
+	- uni2ts==1.2.0
 
 *GPU/CPU notes: All foundation‑model notebooks auto‑select device via `device_map = "cuda" if torch.cuda.is_available() else "cpu"`.*
 *Chronos-T5 runs on CPU, but GPU is recommended for speed.*
